@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header {
+    height: 7rem;;
+    background-color: lightblue;
+}
+
+nav, main, aside {
+    height: 15rem;
+}
+
+nav{
+    background-color: rgb(235, 148, 148);
+}
+
+main {
+    background-color: rgb(206, 167, 243);
+}
+
+aside {
+    background-color: aquamarine;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 15rem 1fr;
+        height: 100vh;
+    }
+
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    nav, main, aside {
+        height: unset;
+    }
+} */
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer"
+    ;
+    gap: 10px;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    background-color: palevioletred;
+    font-family: Outfit;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: rgb(247, 184, 130);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: lightgray;
+}
+
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+aside {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        display: grid;
+        grid-template-areas:
+        "header header header header"
+        "aside nav nav nav"
+        "aside main main main"
+        "footer footer footer footer"
+        ;
+    }
+
+    aside{
+        display: grid;
+        grid-area: aside;
+        background-color: orange;
+        color: white;
+    }
+}
