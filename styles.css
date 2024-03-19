@@ -117,7 +117,7 @@ aside {
     }
 
     aside{
-        display: grid;
+        display: block;
         grid-area: aside;
         background-color: orange;
         color: white;
